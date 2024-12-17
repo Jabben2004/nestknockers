@@ -1,0 +1,290 @@
+@font-face {
+    font-family: 'LGC';
+    src: url('../resources/fonts/Louis George Cafe.ttf');
+  }
+  
+  /* Style for the Navbar */
+  .navbar {
+    position: fixed; /* Fixes the navbar at the top of the page */
+    top: 0;
+    width: 98%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures it appears above other elements */
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f2f2f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Logo Style */
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Navigation Buttons */
+  .nav-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .settings-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  .nav-buttons button {
+    padding: 10px 10px;
+    font-family: 'LGC', sans-serif;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+  .nav-buttons button:hover {
+    transform: scale(1.05);
+  }
+
+  .nav-buttons .active {
+    color: #133E87;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
+
+  .nav-buttons .home-btn {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Settings Button Style */
+  .settings-btn {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    margin-left: 80px;
+  }
+  .settings-icon {
+    width: 21px;
+    height: auto;
+  }
+  .settings-icon:hover {
+    transform: scale(1.05);
+  }
+  /* Main Content Style */
+  .content {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .content h1 {
+    font-family: 'LGC', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .content p {
+    font-family: 'LGC', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px;
+  }
+
+
+
+
+
+/* ========================== Settings Panel =================================== */
+.settings-panel {
+    position: fixed;
+    top: 50px;
+    right: -340px; /* Start off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 100;
+  }
+  
+  /* Slide the panel into view */
+  .settings-panel.open {
+    right: 0;
+  }
+  
+  .settings-panel h2 {
+    font-family: 'LGC', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .settings-panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .settings-panel ul li {
+    margin-bottom: 15px;
+  }
+  
+  .settings-panel ul li a {
+    text-decoration: none;
+    color: #0077cc;
+    font-family: 'LGC', sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .settings-panel ul li a:hover {
+    color: #005fa3;
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+  }
+
+/* Service Buttons */
+/* Service Buttons */
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  gap: 20px;
+  justify-content: center;
+  margin: auto;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 30px 30px 10px 30px;
+}
+
+.service-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: calc(16.66% - 20px); /* 6 items per row, considering gap */
+}
+
+.service-button-container:hover {
+  transform: scale(1.1);
+}
+
+.service-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-button img {
+  width: inherit;
+  height: inherit;
+  border-radius: 100px;
+}
+
+.service-button-container p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #333;
+}
+  
+
+/* Wynard Edits*/
+.settings-panel {
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.account-details {
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.account-details h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.account-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* profile picture*/
+
+.settings-panel {
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.account-details {
+  display: flex;
+  align-items: center;
+  background-color: #e9ecef;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.account-info h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.account-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+
+
+
