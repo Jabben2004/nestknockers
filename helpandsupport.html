@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help - Nest Knockers</title>
+  <link rel="stylesheet" href="css/helpandsupport.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="logo-link" onclick="goToPage1()">
+      <img src="resources/images/logos/LogoLen.png" alt="Nest Knockers Logo" class="logo">
+    </a>
+  
+    <div class="nav-buttons">
+      <button onclick="goToPage2()">Services</button>
+      <button onclick="goToPage3()">Notifications</button>
+      <button onclick="goToPage4()">Activity</button>
+    </div>
+  
+    <button onclick="toggleSettingsPanel()" class="settings-btn">
+      <img src="resources/images/icons/settings.png" alt="Settings" class="settings-icon">
+    </button>
+  </header>
+
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/11/13/03/20241113035329-KJ7FYZEO.js"></script>
+
+  <!-- Main Help & Support Content -->
+  <div class="container">
+    <h1>Help & Support</h1>
+    <p>If you have questions or need assistance, we’re here to help! Choose an option below to find the support you need.</p>
+    
+    <p><a href="https://www.cleaninginstitute.org/cleaning-tips/clean-home/home-cleaning-problems-and-solutions">Common Issues</a></p>
+    <p><a href="#">Contact Support</a></p>
+    <p><a href="faqs.html">FAQs</a></p>
+
+  </div>
+
+  <!-- Settings Panel -->
+  <div class="settings-panel" id="settingsPanel">
+    <button onclick="toggleSettingsPanel()" class="close-btn">✖</button>
+    <h2>Settings</h2>
+    <div class="account-details">
+    <img src="resources\images\logos\iconuser.png" alt="Profile Picture" id="profilePicture" class="profile-pic" />
+    <div class="account-info">
+      <h3>Account Details</h3>
+      <p><strong>Name:</strong> <span id="accountName"> Guest User </span></p>
+      <p><strong>Phone Number:</strong> <span id="accountPhone"> Guest User </span></p>
+    </div>
+    </div>
+  
+    <ul>
+      <li><a href="#" onclick="privacySettings()">Privacy & Security</a></li>
+      <li><a href="#" onclick="helpSupport()">Help & Support</a></li>
+      <li><a href="#" onclick="logout()">Log Out</a></li>
+    </ul>
+  </div>
+
+
+  <script src="java/app.js"></script>
+</body>
+</html>

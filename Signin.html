@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Nest Knockers</title>
+  <link rel="stylesheet" href="css/Signin.css">
+</head>
+<body>
+  <img src="resources/images/logos/LogoLen.png" alt="Nest Knockers Logo" class="logo">
+  <div class="signin-container">
+    <h1>Sign In</h1>
+    <form id="signinForm">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password">
+      
+      <button type="button" onclick="signIn()" class="sign-in-btn">Sign In</button>
+    </form>
+    
+    <!-- Proceed as Guest Button -->
+    <button type="button" onclick="continueAsGuest()" class="guest-btn">Continue as Guest</button>
+    
+    <!-- Create Account Section -->
+    <div class="signin-account-container">
+      <span class="signin-account-text">Create a New Account</span>
+      <a href="#" onclick="createAccount()" class="signin-account-link">Sign Up</a>
+    </div>
+  </div>
+  <script src="java/app.js"></script>
+</body>
+</html>

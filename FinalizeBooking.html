@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details - Nest Knockers</title>
+  <link rel="stylesheet" href="css/FinalizeBooking.css">
+</head>
+
+<body>
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/11/13/03/20241113035329-KJ7FYZEO.js"></script>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="Homepage.html" class="logo-link" onclick="goToPage1()">
+        <img src="resources/images/logos/LogoLen.png" alt="Nest Knockers Logo" class="logo">
+      </a>
+    <div class="nav-buttons">
+      <button onclick="goToPage2()" class="active">Services</button>
+      <button onclick="goToPage3()">Notifications</button>
+      <button onclick="goToPage4()">Activity</button>
+    </div>
+    <button onclick="toggleSettingsPanel()" class="settings-btn">
+      <img src="resources/images/icons/settings.png" alt="Settings" class="settings-icon">
+    </button>
+  </header>
+
+  <div class="finalize-booking-container">
+    <h1>Finalize Your Booking</h1>
+  
+    <div class="service-details">
+      <div class="provider-info">
+        <img id="provider-image" src="" alt="Provider Logo">
+        <div class="provider-details">
+          <h2 id="provider-name">Service Provider</h2>
+          <p id="provider-category">Category</p>
+          <p id="provider-address">Address</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="selected-services">
+      <h2>Selected Services</h2>
+      <ul id="services-list"></ul>
+    </div>
+  
+    <div class="additional-details">
+      <h2>Additional Information</h2>
+      <label>Home Address: <input type="text" id="home-address" required></label>
+      <label>Time Frame: <input type="datetime-local" id="time-frame" required></label>
+      <label>Payment Method:
+        <select id="payment-method">
+          <option value="cash">Cash</option>
+          <option value="card">Card</option>
+          <option value="gcash">GCash</option>
+        </select>
+      </label>
+  
+      <!-- Section for Card Details -->
+      <div id="card-details" class="payment-section" style="display:none;">
+        <h3>Enter Card Details</h3>
+        <label>Card Number: <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX"></label>
+        <label>Card Expiry Date: <input type="month" id="expiry-date"></label>
+        <label>Card CVV: <input type="text" id="cvv" placeholder="XXX"></label>
+      </div>
+  
+      <!-- Section for GCash Phone Number -->
+      <div id="gcash-phone" class="payment-section" style="display:none;">
+        <h3>Enter GCash Phone Number</h3>
+        <div class="gcash-input">
+          <span class="country-flag">🇵🇭</span>
+          <span class="country-code">+63</span> 
+          <input type="tel" id="gcash-phone-number" placeholder="123 456 7890" maxlength="10" pattern="\d{10}">
+        </div>
+      </div>
+  
+      <label><br>Additional Comments:<br><br><center><textarea id="comments"></textarea></center></label>
+    </div>
+<br>
+    <center><button onclick="confirmBooking()" class="confirm">Confirm Booking</button></center>
+  </div>
+
+   <!-- Settings Panel -->
+  <div class="settings-panel" id="settingsPanel">
+    <button onclick="toggleSettingsPanel()" class="close-btn">✖</button>
+    <h2>Settings</h2>
+    <div class="account-details">
+    <img src="resources\images\logos\iconuser.png" alt="Profile Picture" id="profilePicture" class="profile-pic" />
+    <div class="account-info">
+      <h3>Account Details</h3>
+      <p><strong>Name:</strong> <span id="accountName"> Guest User </span></p>
+      <p><strong>Phone Number:</strong> <span id="accountPhone"> Guest User </span></p>
+    </div>
+    </div>
+  
+    <ul>
+      <li><a href="#" onclick="openaccountSettings()">Account Settings</a></li>
+      <li><a href="#" onclick="privacySettings()">Privacy & Security</a></li>
+      <li><a href="#" onclick="helpSupport()">Help & Support</a></li>
+      <li><a href="#" onclick="logout()">Log Out</a></li>
+    </ul>
+  </div>
+
+
+  <script src="java/finalizeDetails.js"></script>
+</body>
+</html>

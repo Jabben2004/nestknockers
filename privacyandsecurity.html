@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priv - Nest Knockers</title>
+  <link rel="stylesheet" href="css/privacyandsecurity.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="logo-link" onclick="goToPage1()">
+      <img src="resources/images/logos/LogoLen.png" alt="Nest Knockers Logo" class="logo">
+    </a>
+  
+    <div class="nav-buttons">
+      <button onclick="goToPage2()">Services</button>
+      <button onclick="goToPage3()">Notifications</button>
+      <button onclick="goToPage4()">Activity</button>
+    </div>
+  
+    <button onclick="toggleSettingsPanel()" class="settings-btn">
+      <img src="resources/images/icons/settings.png" alt="Settings" class="settings-icon">
+    </button>
+  </header>
+
+    <div class="container">
+    <h1>Privacy & Security</h1>
+    <p>
+        Your privacy is important to us. This page outlines the information we collect, how it is used, and the measures we take to secure it.
+    </p>
+    <p>
+        We collect minimal data necessary to enhance your experience. All information is securely stored, and access is restricted to authorized personnel only. You have full control over your data, and can manage your privacy settings at any time.
+    </p>
+    
+    </div>
+
+    <!-- Settings Panel -->
+  <div class="settings-panel" id="settingsPanel">
+    <button onclick="toggleSettingsPanel()" class="close-btn">✖</button>
+    <h2>Settings</h2>
+    <div class="account-details">
+    <img src="resources\images\logos\iconuser.png" alt="Profile Picture" id="profilePicture" class="profile-pic" />
+    <div class="account-info">
+      <h3>Account Details</h3>
+      <p><strong>Name:</strong> <span id="accountName"> Guest User </span></p>
+      <p><strong>Phone Number:</strong> <span id="accountPhone"> Guest User </span></p>
+    </div>
+    </div>
+  
+    <ul>
+      <li><a href="#" onclick="privacySettings()">Privacy & Security</a></li>
+      <li><a href="#" onclick="helpSupport()">Help & Support</a></li>
+      <li><a href="#" onclick="logout()">Log Out</a></li>
+    </ul>
+  </div>
+
+
+    <script src="java/app.js"></script>
+</body>
+</html>

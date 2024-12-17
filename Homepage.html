@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Nest Knockers</title>
+  <link rel="stylesheet" href="css/Homepage.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="logo-link" onclick="goToPage1()">
+      <img src="resources/images/logos/LogoLen.png" alt="Nest Knockers Logo" class="logo">
+    </a>
+  
+    <div class="nav-buttons">
+      <button onclick="goToPage2()">Services</button>
+      <button onclick="goToPage3()">Notifications</button>
+      <button onclick="goToPage4()">Activity</button>
+    </div>
+  
+    <button onclick="toggleSettingsPanel()" class="settings-btn">
+      <img src="resources/images/icons/settings.png" alt="Settings" class="settings-icon">
+    </button>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="content">
+    <h1>Welcome to Nest Knockers</h1>
+    <p>Select a service or use the navigation to explore our features.</p>
+    
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/13/03/20241113035329-KJ7FYZEO.js"></script>
+    
+    <!-- Service Buttons -->
+    <div class="service-buttons">
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/aircon.png" alt="AC Check-up" onclick="filterAndRedirect('AC Check-up')">
+          </button>
+          <p>AC Repair</p>
+        </div>
+        
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/electrical.png" alt="Electrical" onclick="filterAndRedirect('Electrical')">
+          </button>
+          <p>Electrical</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/plumbing.png" alt="Plumbing" onclick="filterAndRedirect('Plumbing')">
+          </button>
+          <p>Plumbing</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/painting.png" alt="Painting" onclick="filterAndRedirect('Painting')">
+          </button>
+          <p>Painting</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/moving.png" alt="Moving" onclick="filterAndRedirect('Moving')">
+          </button>
+          <p>Moving</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/carpentry.png" alt="Carpentry" onclick="filterAndRedirect('Carpentry')">
+          </button>
+          <p>Carpentry</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/landscaping.png" alt="Landscaping" onclick="filterAndRedirect('Landscaping')">
+          </button>
+          <p>Landscaping</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/cleaning.png" alt="Cleaning" onclick="filterAndRedirect('Cleaning')">
+          </button>
+          <p>Cleaning</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/pest.png" alt="Pests" onclick="filterAndRedirect('Pests')">
+          </button>
+          <p>Pests</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/appliances.png" alt="Appliances" onclick="filterAndRedirect('Appliances')">
+          </button>
+          <p>Appliances</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/window cleaning.png" alt="Window Washing" onclick="filterAndRedirect('Window Washing')">
+          </button>
+          <p>Window Washing</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/gutter cleaning.png" alt="Gutter Cleaning" onclick="filterAndRedirect('Gutter Cleaning')">
+          </button>
+          <p>Gutter Cleaning</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/chimney sweeping.png" alt="Chimney Sweeping" onclick="filterAndRedirect('Chimney Sweeping')">
+          </button>
+          <p>Chimney Sweeping</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/pressure washing.png" alt="Pressure Washing" onclick="filterAndRedirect('Pressure Washing')">
+          </button>
+          <p>Pressure Washing</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/furniture repair.png" alt="Furniture Repair" onclick="filterAndRedirect('Furniture Repair')">
+          </button>
+          <p>Furniture Repair</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/pool installation.png" alt="Pool Installation" onclick="filterAndRedirect('Pool Installation')">
+          </button>
+          <p>Pool Installation</p>
+        </div>
+        
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/junk removal.png" alt="Junk Removal" onclick="filterAndRedirect('Junk Removal')">
+          </button>
+          <p>Junk Removal</p>
+        </div>
+
+        <div class="service-button-container">
+          <button class="service-button">
+            <img src="resources/images/icons/air duct cleaning.png" alt="Air Duct Removal" onclick="filterAndRedirect('Air Duct Removal')">
+          </button>
+          <p>Air Duct Removal</p>
+        </div>
+
+        <div class="service-button-container">
+          <button onclick="goToPage2()" class="service-button">
+            <img src="resources/images/icons/SeeAll.png" alt="See All" onlick="goToPage2">
+          </button>
+          <p>See All</p>
+        </div>
+
+
+        </div>
+    </div>
+  </main>
+  
+  <!-- Settings Panel -->
+  <div class="settings-panel" id="settingsPanel">
+    <button onclick="toggleSettingsPanel()" class="close-btn">✖</button>
+    <h2>Settings</h2>
+    <div class="account-details">
+    <img src="resources\images\logos\iconuser.png" alt="Profile Picture" id="profilePicture" class="profile-pic" />
+    <div class="account-info">
+      <h3>Account Details</h3>
+      <p><strong>Name:</strong> <span id="accountName"> Guest User </span></p>
+      <p><strong>Phone Number:</strong> <span id="accountPhone"> Guest User </span></p>
+    </div>
+    </div>
+  
+    <ul>
+      <li><a href="#" onclick="privacySettings()">Privacy & Security</a></li>
+      <li><a href="#" onclick="helpSupport()">Help & Support</a></li>
+      <li><a href="#" onclick="logout()">Log Out</a></li>
+    </ul>
+  </div>
+
+
+
+  <script src="java/app.js"></script>
+</body>
+</html>

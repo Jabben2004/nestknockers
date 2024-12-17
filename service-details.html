@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details - Nest Knockers</title>
+  <link rel="stylesheet" href="css/service-details.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="logo-link" onclick="goToPage1()">
+        <img src="resources/images/logos/LogoLen.png" alt="Nest Knockers Logo" class="logo">
+      </a>
+    <div class="nav-buttons">
+      <button onclick="goToPage2()" class="active">Services</button>
+      <button onclick="goToPage3()">Notifications</button>
+      <button onclick="goToPage4()">Activity</button>
+    </div>
+    <button onclick="toggleSettingsPanel()" class="settings-btn">
+      <img src="resources/images/icons/settings.png" alt="Settings" class="settings-icon">
+    </button>
+  </header>
+
+  <!-- Service Details Container -->
+  <div class="service-details-container">
+    <div class="service-info">
+      <div class="service-image">
+        <img src="" alt="Service Image" id="service-image">
+      </div>
+      <div class="service-description">
+        <h1 id="service-name">Service Name</h1>
+        <h2>Service Type: </h2><p id="service-category" class="category">Category of service</p>
+        <h2>Description: </h2><p id="service-description">Service description will be displayed here.</p>
+      </div>
+    </div>
+    
+    <div class="service-details">
+      <h2>Price</h2>
+      <p id="service-price">Starting at</p>
+
+      <h2>Address</h2>
+      <p id="service-address">Service address here.</p>
+
+      <h2>Select Specific Services</h2>
+      <div id="specific-services" class="specific-services-container">
+        <!-- Specific services with prices will be dynamically inserted here -->
+      </div>
+
+      <button class="book-now-btn" onclick="bookService()">Book Now</button>
+    </div>
+  </div>
+
+
+  <!-- Settings Panel -->
+  <div class="settings-panel" id="settingsPanel">
+    <button onclick="toggleSettingsPanel()" class="close-btn">✖</button>
+    <h2>Settings</h2>
+    <div class="account-details">
+    <img src="resources\images\logos\iconuser.png" alt="Profile Picture" id="profilePicture" class="profile-pic" />
+    <div class="account-info">
+      <h3>Account Details</h3>
+      <p><strong>Name:</strong> <span id="accountName"> Guest User </span></p>
+      <p><strong>Phone Number:</strong> <span id="accountPhone"> Guest User </span></p>
+    </div>
+    </div>
+  
+    <ul>
+      <li><a href="#" onclick="privacySettings()">Privacy & Security</a></li>
+      <li><a href="#" onclick="helpSupport()">Help & Support</a></li>
+      <li><a href="#" onclick="logout()">Log Out</a></li>
+    </ul>
+  </div>
+
+
+
+
+  <script src="java/servicedetails.js"></script>
+</body>
+</html>

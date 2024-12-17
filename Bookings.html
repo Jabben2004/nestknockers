@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings - Nest Knockers</title>
+  <link rel="stylesheet" href="css/Bookings.css">
+</head>
+<body>
+  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2024/11/13/03/20241113035329-KJ7FYZEO.js"></script>
+  
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="Homepage.html" class="logo-link" onclick="goToPage1()">
+      <img src="resources/images/logos/LogoLen.png" alt="Nest Knockers Logo" class="logo">
+    </a>
+  
+    <div class="nav-buttons">
+      <button onclick="goToPage2()"class ="active">Services</button>
+      <button onclick="goToPage3()"class =>Notifications</button>
+      <button onclick="goToPage4()"class =>Activity</button>
+    </div>
+  
+    <button onclick="toggleSettingsPanel()" class="settings-btn">
+      <img src="resources/images/icons/settings.png" alt="Settings" class="settings-icon">
+    </button>
+  </header>
+
+  <!-- Filter Panel -->
+<div class="main-container">
+  <div class="filter-panel">
+    <h2>Filter Service Providers</h2>
+    <input type="text" id="searchBar" placeholder="Search Providers..."">
+
+    <div class="filter-options">
+      <div class="filter-options">
+        <h3>Price Range</h3>
+        
+        <!-- Minimum Price Slider -->
+        <label for="minPrice">Minimum Price</label>
+        <input type="range" id="minPrice" name="minPrice" min="0" max="10000" step="100" value="0">
+        <span id="minPriceValue">0 PHP</span> <!-- Displays the selected minimum price -->
+        <br>
+        <!-- Maximum Price Slider -->
+        <label for="maxPrice">Maximum Price</label>
+        <input type="range" id="maxPrice" name="maxPrice" min="0" max="500000" step="100" value="500000">
+        <span id="maxPriceValue">500,000 PHP</span> <!-- Displays the selected maximum price -->
+      </div>
+      <h3>Category</h3>
+      <label><input type="checkbox" name="category" value="AC Check-up" onclick="filterProviders()">AC Check-up</label>
+      <label><input type="checkbox" name="category" value="Electrical" onclick="filterProviders()">Electrical</label>
+      <label><input type="checkbox" name="category" value="Plumbing" onclick="filterProviders()">Plumbing</label>
+      <label><input type="checkbox" name="category" value="Painting" onclick="filterProviders()">Painting</label>
+      <label><input type="checkbox" name="category" value="Moving" onclick="filterProviders()">Moving</label>
+      <label><input type="checkbox" name="category" value="Carpentry" onclick="filterProviders()">Carpentry</label>
+      <label><input type="checkbox" name="category" value="Landscaping" onclick="filterProviders()">Landscaping</label>
+      <label><input type="checkbox" name="category" value="Cleaning" onclick="filterProviders()">Cleaning</label>
+      <label><input type="checkbox" name="category" value="Pests" onclick="filterProviders()">Pests</label>
+      <label><input type="checkbox" name="category" value="Appliances" onclick="filterProviders()">Appliances</label>
+      <label><input type="checkbox" name="category" value="Window Washing" onclick="filterProviders()">Window Washing</label>
+      <label><input type="checkbox" name="category" value="Gutter Cleaning" onclick="filterProviders()">Gutter Cleaning</label>
+      <label><input type="checkbox" name="category" value="Chimney Sweeping" onclick="filterProviders()">Chimney Sweeping</label>
+      <label><input type="checkbox" name="category" value="Pressure Washing" onclick="filterProviders()">Pressure Washing</label>
+      <label><input type="checkbox" name="category" value="Furniture Repair" onclick="filterProviders()">Furniture Repair</label>
+      <label><input type="checkbox" name="category" value="Pool Installation" onclick="filterProviders()">Pool Installation</label>
+      <label><input type="checkbox" name="category" value="Junk Removal" onclick="filterProviders()">Junk Removal</label>
+      <label><input type="checkbox" name="category" value="Air Duct Removal" onclick="filterProviders()">Air Duct Removal</label>
+    </div>
+
+    <div class="filter-options">
+      <h3>Rating</h3>
+      <label><input type="checkbox" name="rating" value="4" onclick="filterProviders()"> 4+ Stars</label>
+      <label><input type="checkbox" name="rating" value="3" onclick="filterProviders()"> 3+ Stars</label>
+      <label><input type="checkbox" name="rating" value="2" onclick="filterProviders()"> 2+ Stars</label>
+    </div>
+  </div>
+
+
+
+  <!-- JavaScript to handle form submission -->
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Your booking has been submitted successfully!');
+      // Here you can add additional code to send the booking details to the server
+    });
+  </script>
+    
+  
+    <!-- Services Section -->
+  <section class="services-section">
+    <div class="header">
+      <h2>Select from our wide range of Providers!</h2>
+    </div>
+
+    <!-- List of Services -->
+    <div class="service-list"></div>
+
+ <!-- Settings Panel -->
+ <div class="settings-panel" id="settingsPanel">
+  <button onclick="toggleSettingsPanel()" class="close-btn">✖</button>
+  <h2>Settings</h2>
+  <div class="account-details">
+  <img src="resources\images\logos\iconuser.png" alt="Profile Picture" id="profilePicture" class="profile-pic" />
+  <div class="account-info">
+    <h3>Account Details</h3>
+    <p><strong>Name:</strong> <span id="accountName"> Guest User </span></p>
+    <p><strong>Phone Number:</strong> <span id="accountPhone"> Guest User </span></p>
+  </div>
+  </div>
+
+  <ul>
+    <li><a href="#" onclick="openaccountSettings()">Account Settings</a></li>
+    <li><a href="#" onclick="privacySettings()">Privacy & Security</a></li>
+    <li><a href="#" onclick="helpSupport()">Help & Support</a></li>
+    <li><a href="#" onclick="logout()">Log Out</a></li>
+  </ul>
+</div>
+
+  
+    <script src="java\filter.js"></script>
+  </div>
+</body>
+</html>
